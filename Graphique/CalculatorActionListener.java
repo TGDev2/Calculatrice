@@ -18,28 +18,30 @@ public class CalculatorActionListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         try {
-            int n1 = Integer.parseInt(num1.getText());
-            int n2 = Integer.parseInt(num2.getText());
-            if (operation.equals("√")) {
-                result.setText(String.valueOf(Math.sqrt(n1)));
+            double n1 = Double.parseDouble(num1.getText());
+            double n2 = 0;
+            if (!operation.equals("√")) {
+                n2 = Double.parseDouble(num2.getText());
+            } else if (operation.equals("√")) {
+                result.setText(String.format("%.2f", Math.sqrt(n1)));
             } else if (n2 == 0 && operation.equals("/")) {
-                result.setText("Division par zero");
+                result.setText("Division par zéro");
             } else {
                 switch (operation) {
                     case "+":
-                        result.setText(String.valueOf(n1 + n2));
+                        result.setText(String.format("%.2f", n1 + n2));
                         break;
                     case "-":
-                        result.setText(String.valueOf(n1 - n2));
+                        result.setText(String.format("%.2f", n1 - n2));
                         break;
                     case "*":
-                        result.setText(String.valueOf(n1 * n2));
+                        result.setText(String.format("%.2f", n1 * n2));
                         break;
                     case "/":
-                        result.setText(String.valueOf(n1 / n2));
+                        result.setText(String.format("%.2f", n1 / n2));
                         break;
                     case "^":
-                        result.setText(String.valueOf(Math.pow(n1, n2)));
+                        result.setText(String.format("%.2f", Math.pow(n1, n2)));
                         break;
                 }
             }
@@ -47,5 +49,4 @@ public class CalculatorActionListener implements ActionListener {
             result.setText("Entrée non valide");
         }
     }
-
 }
