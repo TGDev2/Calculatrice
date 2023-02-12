@@ -8,7 +8,7 @@ import javax.swing.JLabel;
 
 public class Calculator extends JFrame {
     public JTextField num1, num2;
-    public JButton addition, soustraction, multiplication, division, racine, puissance;
+    public JButton addition, soustraction, multiplication, division, racine, puissance, effacer;
     public JLabel result;
 
     public Calculator() {
@@ -22,6 +22,7 @@ public class Calculator extends JFrame {
         racine = new JButton("√");
         puissance = new JButton("^");
         result = new JLabel();
+        effacer = new JButton("Effacer");
         add(num1);
         add(num2);
         add(addition);
@@ -31,5 +32,6 @@ public class Calculator extends JFrame {
         add(racine);
         add(puissance);
         add(result);
+        add(effacer);
     }
 }

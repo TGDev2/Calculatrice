@@ -20,5 +20,7 @@ public class Main {
                                 new CalculatorActionListener(calculator.num1, calculator.num2, calculator.result, "√"));
                 calculator.puissance.addActionListener(
                                 new CalculatorActionListener(calculator.num1, calculator.num2, calculator.result, "^"));
+                calculator.effacer.addActionListener(
+                                new ClearActionListener(calculator.num1, calculator.num2, calculator.result));
         }
 }

@@ -22,9 +22,11 @@ public class CalculatorActionListener implements ActionListener {
             double n2 = 0;
             if (!operation.equals("√")) {
                 n2 = Double.parseDouble(num2.getText());
-            } else if (operation.equals("√")) {
+            } else {
                 result.setText(String.format("%.2f", Math.sqrt(n1)));
-            } else if (n2 == 0 && operation.equals("/")) {
+            }
+
+            if (n2 == 0 && operation.equals("/")) {
                 result.setText("Division par zéro");
             } else {
                 switch (operation) {
