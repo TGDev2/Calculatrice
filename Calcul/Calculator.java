@@ -5,11 +5,14 @@ import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
 
 public class Calculator extends JFrame {
     public JTextField num1, num2;
-    public JButton addition, soustraction, multiplication, division, racine, puissance, effacer;
+    public JButton addition, soustraction, multiplication, division, racine, puissance, effacer, effacerHistorique;
     public JLabel result;
+    public JTextArea history;
 
     public Calculator() {
         setLayout(new FlowLayout());
@@ -23,6 +26,10 @@ public class Calculator extends JFrame {
         puissance = new JButton("^");
         result = new JLabel();
         effacer = new JButton("Effacer");
+        history = new JTextArea(5, 20);
+        history.setEditable(false);
+        effacerHistorique = new JButton("Effacer historique");
+        JScrollPane scrollPane = new JScrollPane(history);
         add(num1);
         add(num2);
         add(addition);
@@ -33,5 +40,7 @@ public class Calculator extends JFrame {
         add(puissance);
         add(result);
         add(effacer);
+        add(scrollPane);
+        add(effacerHistorique);
     }
 }
