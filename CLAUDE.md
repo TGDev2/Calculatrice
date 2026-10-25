@@ -36,7 +36,7 @@ Current state (pre-E1), PowerShell from the repo root:
 
 ```powershell
 .\check.ps1     # javac everything into out/, then runs each Tests.*Test main()
-.un.ps1       # compile into out/ and launch Main
+.\run.ps1       # compile into out/ and launch Main
 .\package.ps1   # check + jar + jpackage app-image -> dist\Calc\Calc.exe, dist\Calc-portable.zip
 ```
 
