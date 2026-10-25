@@ -176,13 +176,13 @@ Création : `pom.xml`, `mvnw`, `mvnw.cmd`, `.mvn/wrapper/*`, `.gitattributes`, `
 Aucune correction fonctionnelle, aucun changement de messages, aucun renommage de package. Pas de tests par propriétés, de fuzzing, d'installeurs multiplateformes ni de rapport de conformité (voir « Évolutions futures »).
 
 ### Critères d'acceptation
-- [ ] `.\mvnw.cmd -B verify` : `BUILD SUCCESS`, **au moins 23 tests, 0 échec, 0 erreur, 0 ignoré** (sous Windows avec affichage).
-- [ ] Les 23 anciens noms de méthodes existent à l'identique dans les classes JUnit.
-- [ ] `.\mvnw.cmd -B test "-Djava.awt.headless=true"` : réussi, avec exactement les tests d'interface signalés « ignorés ».
-- [ ] `.\mvnw.cmd -B test "-Djava.awt.headless=true" "-Dcalc.ui.required=true"` : **échoue** (le test d'interface refuse d'être ignoré).
-- [ ] `jar tf target\calc.jar` ne contient aucune entrée `Tests/`.
-- [ ] `powershell -File .\check.ps1` retourne 0 ; `run.ps1` lance l'application ; `package.ps1` produit `Calc.exe` et le zip.
-- [ ] `git status` propre juste après un `git checkout` frais (pas de fichiers fantômes « modifiés »).
+- [x] `.\mvnw.cmd -B verify` : `BUILD SUCCESS`, **au moins 23 tests, 0 échec, 0 erreur, 0 ignoré** (sous Windows avec affichage).
+- [x] Les 23 anciens noms de méthodes existent à l'identique dans les classes JUnit.
+- [x] `.\mvnw.cmd -B test "-Djava.awt.headless=true"` : réussi, avec exactement les tests d'interface signalés « ignorés ».
+- [x] `.\mvnw.cmd -B test "-Djava.awt.headless=true" "-Dcalc.ui.required=true"` : **échoue** (le test d'interface refuse d'être ignoré).
+- [x] `jar tf target\calc.jar` ne contient aucune entrée `Tests/`.
+- [x] `powershell -File .\check.ps1` retourne 0 ; `run.ps1` lance l'application ; `package.ps1` produit `Calc.exe` et le zip.
+- [x] `git status` propre juste après un `git checkout` frais (pas de fichiers fantômes « modifiés »).
 - [ ] Le workflow CI s'exécute avec succès sur GitHub (à vérifier par toi après un `push` de la branche).
 
 ### Commande Claude Code
